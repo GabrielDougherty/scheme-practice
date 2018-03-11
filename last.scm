@@ -1,11 +1,11 @@
 ;; gets the last item in a list
 
-;; if the list is empty, print "empty!"
+;; if the list is empty, return it
 ;; If the end (cdr l) is empty, it is length 1, so we know the last element.
 ;; Otherwise, get the last element of the list without the first element (cdr l)
 
 (define (last l)
-  (cond ((null? l) (list ))
+  (cond ((null? l) l)
 		((null? (cdr l)) (car l))
 		(else (last (cdr l)))))
 
